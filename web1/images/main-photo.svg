@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#102a43"/><stop offset="100%" stop-color="#1f9bb6"/></linearGradient></defs>
+<rect width="800" height="500" fill="url(#g)"/>
+<rect x="120" y="230" width="560" height="170" rx="18" fill="#ffffff" opacity="0.88"/>
+<rect x="170" y="180" width="90" height="220" rx="10" fill="#d8e6ee" stroke="#102a43" stroke-width="4"/>
+<rect x="300" y="150" width="90" height="250" rx="10" fill="#d8e6ee" stroke="#102a43" stroke-width="4"/>
+<rect x="430" y="180" width="90" height="220" rx="10" fill="#d8e6ee" stroke="#102a43" stroke-width="4"/>
+<line x1="80" y1="150" x2="720" y2="150" stroke="#ffc107" stroke-width="10" stroke-linecap="round"/>
+<line x1="215" y1="150" x2="215" y2="180" stroke="#ffc107" stroke-width="7"/>
+<line x1="345" y1="150" x2="345" y2="150" stroke="#ffc107" stroke-width="7"/>
+<line x1="475" y1="150" x2="475" y2="180" stroke="#ffc107" stroke-width="7"/>
+<circle cx="620" cy="310" r="52" fill="#ffc107" opacity="0.9"/>
+<path d="M620 270 L602 318 H625 L610 350 L650 298 H627 Z" fill="#102a43"/>
+<text x="50" y="55" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#fff">ТП «Лівобережна»</text>
+<text x="50" y="92" font-family="Arial, sans-serif" font-size="20" fill="#eaf3f8">Загальний вигляд енергетичного об’єкта</text>
+</svg>
