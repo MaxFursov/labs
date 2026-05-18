@@ -1,0 +1,198 @@
+/* Власні стилі для інформаційного сайту енергетичного об'єкта */
+:root {
+  --primary-color: #125c7a;
+  --secondary-color: #1f9bb6;
+  --accent-color: #ffc107;
+  --dark-color: #102a43;
+  --light-bg: #f5f8fb;
+  --text-color: #273444;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  line-height: 1.7;
+  background: var(--light-bg);
+  padding-top: 70px;
+}
+
+.custom-navbar {
+  background: linear-gradient(90deg, var(--dark-color), var(--primary-color));
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
+}
+
+.navbar-brand {
+  letter-spacing: 0.5px;
+}
+
+.nav-link {
+  margin-left: 12px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent-color) !important;
+  transform: translateY(-2px);
+}
+
+.hero-section {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(16, 42, 67, 0.88), rgba(18, 92, 122, 0.82)),
+    url("../images/main-photo.svg") center/cover no-repeat;
+  box-shadow: inset 0 -80px 120px rgba(0, 0, 0, 0.12);
+}
+
+.hero-label {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(4px);
+}
+
+.hero-section h1 {
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.35);
+  animation: fadeInUp 0.9s ease-out;
+}
+
+.content-section {
+  scroll-margin-top: 95px;
+}
+
+.section-title {
+  color: var(--primary-color);
+  font-weight: 700;
+  padding-bottom: 10px;
+  margin-bottom: 24px;
+  border-bottom: 4px solid var(--accent-color);
+  display: inline-block;
+}
+
+p {
+  text-align: justify;
+}
+
+.card {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(16, 42, 67, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(16, 42, 67, 0.16);
+}
+
+.image-card img {
+  background: #eaf3f8;
+  transition: transform 0.35s ease;
+}
+
+.image-card:hover img {
+  transform: scale(1.03);
+}
+
+.table {
+  background: #fff;
+}
+
+.table thead th {
+  background: linear-gradient(90deg, var(--dark-color), var(--primary-color));
+  color: #fff;
+  border: none;
+}
+
+.table-hover tbody tr {
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(31, 155, 182, 0.1);
+  transform: scale(1.005);
+}
+
+.feature-box {
+  min-height: 110px;
+  padding: 24px;
+  border-radius: 16px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(18, 92, 122, 0.18);
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+}
+
+.contacts-card {
+  border-left: 6px solid var(--accent-color);
+}
+
+footer {
+  background: linear-gradient(90deg, var(--dark-color), var(--primary-color));
+  margin-top: 60px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 62px;
+  }
+
+  .hero-section {
+    min-height: 430px;
+    padding: 50px 0;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .nav-link {
+    margin-left: 0;
+  }
+
+  p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 1.65rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.45rem;
+  }
+}
