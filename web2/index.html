@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Система моніторингу компенсаторної установки КРМ з динамічним оновленням параметрів">
+  <title>Моніторинг КРМ | Практична робота №2</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <p class="eyebrow">Практична робота №2 • JavaScript</p>
+      <h1>Моніторинг компенсаторної установки КРМ</h1>
+      <p class="hero__subtitle">Динамічний контроль параметрів реактивної потужності, cos φ, напруги та стану обладнання</p>
+      <div class="hero__meta" aria-label="Стан системи моніторингу">
+        <span>Останнє оновлення: <strong id="lastUpdate">--:--:--</strong></span>
+        <span>Автооновлення: <strong id="autoStatus">вимкнено</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel controls" aria-labelledby="controlsTitle">
+      <div>
+        <h2 id="controlsTitle">Панель керування</h2>
+        <p>Оновлюйте параметри вручну або запустіть автоматичне оновлення кожні 3 секунди.</p>
+      </div>
+      <div class="controls__buttons">
+        <button id="manualUpdateBtn" class="btn btn-primary" type="button">Оновити дані</button>
+        <button id="autoUpdateBtn" class="btn btn-success" type="button">Запустити автооновлення</button>
+        <button id="themeBtn" class="btn btn-secondary" type="button">Темна тема</button>
+        <button id="exportBtn" class="btn btn-secondary" type="button">Експорт CSV</button>
+        <button id="resetBtn" class="btn btn-danger" type="button">Очистити історію</button>
+      </div>
+    </section>
+
+    <section class="status-line" aria-label="Загальний стан об'єкта">
+      <div class="summary-card">
+        <span class="summary-card__label">Загальний стан</span>
+        <strong id="overallStatus" class="badge badge-normal">Норма</strong>
+      </div>
+      <div class="summary-card">
+        <span class="summary-card__label">Режим роботи</span>
+        <strong id="workMode">Автоматична компенсація</strong>
+      </div>
+      <div class="summary-card">
+        <span class="summary-card__label">Економія за день</span>
+        <strong><span id="dailySaving">0.00</span> кВт·год</strong>
+      </div>
+    </section>
+
+    <section class="dashboard" id="dashboard" aria-label="Параметри моніторингу"></section>
+
+    <section class="panel chart-section" aria-labelledby="chartTitle">
+      <div class="chart-section__header">
+        <div>
+          <h2 id="chartTitle">Історія коефіцієнта потужності</h2>
+          <p>Графік відображає останні 20 вимірювань cos φ.</p>
+        </div>
+        <span id="historyCount" class="badge badge-info">0 записів</span>
+      </div>
+      <canvas id="historyChart" width="1100" height="320" aria-label="Графік історії параметрів"></canvas>
+    </section>
+
+    <section class="panel info-grid" aria-labelledby="infoTitle">
+      <h2 id="infoTitle">Опис системи</h2>
+      <article>
+        <h3>Призначення КРМ</h3>
+        <p>Компенсаторна установка реактивної потужності призначена для покращення коефіцієнта потужності електромережі, зменшення реактивних перетоків та зниження втрат електроенергії.</p>
+      </article>
+      <article>
+        <h3>Принцип моніторингу</h3>
+        <p>JavaScript генерує імітовані вимірювання, перевіряє їх відносно нормальних діапазонів, оновлює DOM-елементи та візуально позначає нормальні, попереджувальні й критичні стани.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>КПІ ім. Ігоря Сікорського • Основи веб-програмування • Практична робота №2</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
