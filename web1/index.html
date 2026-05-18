@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Інформаційний веб-сайт енергетичного об'єкта ТП Лівобережна 35/10 кВ">
+  <meta name="keywords" content="енергетика, трансформаторна підстанція, HTML, CSS, Bootstrap">
+  <title>ТП «Лівобережна» 35/10 кВ</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#top">⚡ ЕнергоПортал</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Перемкнути навігацію">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#about">Про об'єкт</a></li>
+          <li class="nav-item"><a class="nav-link" href="#params">Параметри</a></li>
+          <li class="nav-item"><a class="nav-link" href="#scheme">Схема</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacts">Контакти</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="top" class="hero-section text-white text-center">
+    <div class="container">
+      <p class="hero-label mb-3">Інформаційний портал енергетичного об'єкта</p>
+      <h1 class="display-4 fw-bold">ТП «Лівобережна» 35/10 кВ</h1>
+      <p class="lead mt-3">Трансформаторна підстанція для надійного електропостачання лівобережного району м. Дніпро</p>
+      <a href="#about" class="btn btn-warning btn-lg mt-4 shadow-sm">Дізнатися більше</a>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <section id="about" class="content-section mb-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <h2 class="section-title">Про об'єкт</h2>
+          <p>
+            Трансформаторна підстанція «Лівобережна» 35/10 кВ є важливим вузлом розподільчої мережі міста Дніпро. Об'єкт призначений для приймання електроенергії на рівні напруги 35 кВ, її перетворення до рівня 10 кВ та подальшого розподілу між житловими кварталами, комунальними об'єктами і невеликими промисловими споживачами лівобережного району.
+          </p>
+          <p>
+            Підстанція обладнана двома силовими трансформаторами загальною потужністю 16 МВА, сучасними комірками розподільчого пристрою, мікропроцесорним релейним захистом та системою дистанційного моніторингу. Така конфігурація дозволяє швидко реагувати на аварійні режими, контролювати навантаження та забезпечувати стабільну роботу електромережі протягом доби.
+          </p>
+          <p>
+            Об'єкт має резервування основного обладнання, тому при плановому ремонті одного трансформатора електропостачання споживачів може підтримуватися через інший трансформатор. Це підвищує надійність енергопостачання, знижує тривалість можливих перерв і створює умови для подальшої модернізації мережі.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <div class="card image-card">
+            <img src="images/main-photo.svg" alt="Загальний вигляд трансформаторної підстанції" class="img-fluid rounded-top">
+            <div class="card-body">
+              <h5 class="card-title">ТП «Лівобережна»</h5>
+              <p class="card-text">Розподільчий енергетичний об'єкт 35/10 кВ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="params" class="content-section mb-5">
+      <h2 class="section-title">Технічні параметри</h2>
+      <div class="table-responsive shadow-sm rounded">
+        <table class="table table-striped table-hover mb-0">
+          <thead class="table-dark">
+            <tr>
+              <th>Параметр</th>
+              <th>Значення</th>
+              <th>Одиниці виміру</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Тип об'єкта</td><td>Трансформаторна підстанція</td><td>-</td></tr>
+            <tr><td>Номінальна потужність</td><td>16</td><td>МВА</td></tr>
+            <tr><td>Вища напруга</td><td>35</td><td>кВ</td></tr>
+            <tr><td>Нижча напруга</td><td>10</td><td>кВ</td></tr>
+            <tr><td>Кількість трансформаторів</td><td>2</td><td>шт.</td></tr>
+            <tr><td>Тип розподільчого пристрою</td><td>КРУ 10 кВ</td><td>-</td></tr>
+            <tr><td>Система захисту</td><td>Мікропроцесорний релейний захист</td><td>-</td></tr>
+            <tr><td>Режим роботи</td><td>Цілодобовий</td><td>24/7</td></tr>
+            <tr><td>Обслуговуючий персонал</td><td>4</td><td>особи</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="scheme" class="content-section mb-5">
+      <h2 class="section-title">Схема та обладнання</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100 image-card">
+            <img src="images/scheme.svg" alt="Однолінійна схема підстанції 35/10 кВ" class="img-fluid rounded-top">
+            <div class="card-body">
+              <h5 class="card-title">Однолінійна схема</h5>
+              <p class="card-text">Схематичне зображення підключення трансформаторів та розподільчих пристроїв.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 image-card">
+            <img src="images/equipment.svg" alt="Основне обладнання підстанції" class="img-fluid rounded-top">
+            <div class="card-body">
+              <h5 class="card-title">Основне обладнання</h5>
+              <p class="card-text">Силові трансформатори, комірки КРУ, системи захисту, автоматики та моніторингу.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section mb-5">
+      <h2 class="section-title">Переваги об'єкта</h2>
+      <div class="row g-3">
+        <div class="col-md-4"><div class="feature-box">Висока надійність електропостачання</div></div>
+        <div class="col-md-4"><div class="feature-box">Можливість резервування навантаження</div></div>
+        <div class="col-md-4"><div class="feature-box">Сучасний моніторинг параметрів</div></div>
+      </div>
+    </section>
+
+    <section id="contacts" class="content-section mb-5">
+      <h2 class="section-title">Контактна інформація</h2>
+      <div class="card contacts-card">
+        <div class="card-body">
+          <p><strong>Адреса:</strong> м. Дніпро, район Лівобережний</p>
+          <p><strong>Телефон диспетчера:</strong> +380 (56) 000-00-00</p>
+          <p><strong>Email:</strong> livoberezhna@energy.dp.ua</p>
+          <p><strong>Режим роботи:</strong> цілодобово, без вихідних</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-white text-center py-4">
+    <div class="container">
+      <p class="mb-1">&copy; 2025 ЕнергоПортал. Практична робота №1 з дисципліни «Основи веб-програмування».</p>
+      <small>HTML5, CSS3, Bootstrap 5</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
