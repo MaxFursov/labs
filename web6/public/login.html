@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вхід - Smart Grid Security</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+  <main class="auth-card">
+    <h1>🔐 Smart Grid Security</h1>
+    <p class="subtitle">Захищений портал управління розумною енергомережею</p>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="operator@grid.local">
+      </div>
+      <div class="form-group">
+        <label for="password">Пароль</label>
+        <input id="password" name="password" type="password" required placeholder="Operator123!">
+      </div>
+      <button class="btn-primary" type="submit">Увійти</button>
+    </form>
+    <div id="message" class="message"></div>
+    <p class="switch-link"><a href="register.html">Створити користувача</a></p>
+    <p class="subtitle">Тест: operator@grid.local / Operator123!</p>
+  </main>
+  <script src="common.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', refreshCsrf);
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = Object.fromEntries(new FormData(e.target));
+      try {
+        const response = await secureFetch('/auth/login', { method: 'POST', body: JSON.stringify(formData) });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || 'Помилка входу');
+        showMessage('message', 'success', result.message);
+        setTimeout(() => location.href = 'dashboard.html', 600);
+      } catch (error) {
+        showMessage('message', 'error', error.message);
+      }
+    });
+  </script>
+</body>
+</html>
