@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Реєстр ЕСКО контрактів з серверною обробкою Node.js та Express">
+  <title>Реєстр ЕСКО контрактів</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Практична робота №3</p>
+        <h1>Реєстр ЕСКО контрактів</h1>
+        <p>HTML-форма для збору даних, серверна обробка Node.js + Express та запис у JSON-файл</p>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel form-panel" aria-labelledby="formTitle">
+        <h2 id="formTitle">Додати ЕСКО контракт</h2>
+        <form id="escoForm" novalidate>
+          <div class="grid two">
+            <div class="field">
+              <label for="contractNumber">Номер договору *</label>
+              <input type="text" id="contractNumber" name="contractNumber" placeholder="ESCO-2025-001" required minlength="3">
+            </div>
+            <div class="field">
+              <label for="status">Статус *</label>
+              <select id="status" name="status" required>
+                <option value="">Оберіть статус</option>
+                <option value="planned">Планується</option>
+                <option value="active">Активний</option>
+                <option value="completed">Завершений</option>
+                <option value="paused">Призупинений</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="customer">Замовник *</label>
+            <input type="text" id="customer" name="customer" placeholder="Наприклад: КП Теплоенерго" required>
+          </div>
+
+          <div class="field">
+            <label for="objectName">Об'єкт енергосервісу *</label>
+            <input type="text" id="objectName" name="objectName" placeholder="Школа №12, котельня, адміністративна будівля" required>
+          </div>
+
+          <div class="field">
+            <label for="address">Адреса об'єкта *</label>
+            <textarea id="address" name="address" rows="3" placeholder="м. Київ, вул. Енергетична, 15" required></textarea>
+          </div>
+
+          <div class="grid two">
+            <div class="field">
+              <label for="contractValue">Вартість договору, грн *</label>
+              <input type="number" id="contractValue" name="contractValue" min="1" step="1000" placeholder="1500000" required>
+            </div>
+            <div class="field">
+              <label for="annualSaving">Очікувана економія, грн/рік *</label>
+              <input type="number" id="annualSaving" name="annualSaving" min="1" step="1000" placeholder="350000" required>
+            </div>
+          </div>
+
+          <div class="grid two">
+            <div class="field">
+              <label for="startDate">Дата початку *</label>
+              <input type="date" id="startDate" name="startDate" required>
+            </div>
+            <div class="field">
+              <label for="endDate">Дата завершення *</label>
+              <input type="date" id="endDate" name="endDate" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="responsiblePerson">Відповідальна особа</label>
+            <input type="text" id="responsiblePerson" name="responsiblePerson" placeholder="ПІБ або відділ">
+          </div>
+
+          <div class="field">
+            <label for="notes">Коментар</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Наприклад: модернізація освітлення та теплового пункту"></textarea>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn primary">Зберегти</button>
+            <button type="reset" class="btn secondary">Очистити</button>
+          </div>
+        </form>
+        <div id="message" class="message" role="status"></div>
+      </section>
+
+      <section class="panel" aria-labelledby="listTitle">
+        <div class="list-header">
+          <h2 id="listTitle">Зареєстровані контракти</h2>
+          <button id="refreshBtn" class="btn small">Оновити</button>
+        </div>
+
+        <div class="filters">
+          <input type="search" id="searchInput" placeholder="Пошук за номером, замовником або об’єктом">
+          <select id="statusFilter">
+            <option value="all">Усі статуси</option>
+            <option value="planned">Планується</option>
+            <option value="active">Активний</option>
+            <option value="completed">Завершений</option>
+            <option value="paused">Призупинений</option>
+          </select>
+        </div>
+
+        <div class="stats" id="statistics">
+          <div><strong>0</strong><span>контрактів</span></div>
+          <div><strong>0</strong><span>активних</span></div>
+          <div><strong>0 грн</strong><span>економія/рік</span></div>
+        </div>
+
+        <div id="contractsList" class="contracts-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
